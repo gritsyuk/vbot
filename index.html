@@ -62,7 +62,19 @@
         }
         .car-image {
             display: block;
-            padding: 1em;
+        }
+        .car-select {
+            width: 100%;
+            height: 2em;
+        }
+
+        .btn-add-cart {
+            width: 100%;
+            height: 2em;
+        }
+        #carDetails {
+            min-height: 156px;
+            padding: 1em 0px;
         }
     </style>
 </head>
@@ -81,23 +93,23 @@
                 <path d="M86.6585 1.01251L88.3115 1.01251V3.29251H89.176V0.499512L91 0.499512V5.57251L83.875 5.57251V0.556512L85.699 0.841512V3.29251H86.6585V1.01251Z"></path>
             </svg>
         </div>
-        <h1>Выбрать силуэт</h1>
+        <h2>Выбрать силуэт</h2>
         <label for="carBrand">Марка:</label>
-            <select id="carBrand" onchange="populateModels()">
+            <select class="car-select" id="carBrand" onchange="populateModels()">
                 <option value="">Выберите марку</option>
             </select>
 
             <br><br>
 
             <label for="carModel">Модель:</label>
-            <select id="carModel" onchange="updateCarDetails()">
+            <select class="car-select" id="carModel" onchange="updateCarDetails()">
                 <option value="">Выберите модель</option>
             </select>
 
             <div id="carDetails">
                 <img src="" alt="Изображение автомобиля" class="car-image" id="carImage">
-                <button onclick="Telegram.WebApp.showAlert('Добвлено в корзину');">Добавить в корзину</button>
             </div>
+             <button class="btn-add-cart" onclick="Telegram.WebApp.showAlert('Добвлено в корзину');">Добавить в корзину</button>
 
 <!--        <br><br>-->
 <!--        <hr>-->
@@ -137,7 +149,7 @@
 
         // Show main button
         Telegram.WebApp.MainButton.setParams({
-            text: 'Main Button'
+            text: 'Оформить заказ'
         });
         Telegram.WebApp.MainButton.onClick(function () {
             Telegram.WebApp.showAlert('Main Button was clicked')
@@ -178,7 +190,6 @@
             expandEl.innerText = 'Is Expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false');
         }
 
-        Telegram.WebApp.setHeaderColor('secondary_bg_color');
 
         setViewportData();
         Telegram.WebApp.onEvent('viewportChanged', setViewportData);
