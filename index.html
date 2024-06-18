@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Your unlimited access</title>
+    <script src="main.js"></script>
     <style>
         body {
             --bg-color: var(--tg-theme-bg-color);
@@ -87,6 +88,15 @@
         <h1>Кнопки</h1>
         <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
         <button onclick="toggleMainButton();">Toggle Main Button</button>
+        <label for="make">Марка:</label>
+        <select id="make" onchange="updateModels()">
+            <option value="">--Выберите марку--</option>
+        </select>
+
+        <label for="model">Модель:</label>
+        <select id="model">
+            <option value="">--Сначала выберите марку--</option>
+        </select>
     </main>
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
@@ -160,3 +170,25 @@
     <script>eruda.init();</script>
 </body>
 </html>
+
+Aidi A4 B6 2004
+Audi A6 C5 1999
+Audi A4 B7 2007
+Audi A5 8T 2001
+Audi A6 C7 2012
+Audi A3 8V 2015
+Audi A4 B8 2015
+Audi A4 B9 2017
+Audi A3 8V 2018
+Audi A6 C8 2019
+Audi A4 B9 2020
+Audi A3 8Y 2020
+Audi A7 4K 2021
+Audi RS E-trone GT 2022
+Audi A5 F5 2022
+Audi R8 GT 2023
+Audi A4 B7 2009
+Audi R8 Coupe
+Audi RS6 C8 2022
+Audi A4 B5 1999
+Индивидуальный дизайн
