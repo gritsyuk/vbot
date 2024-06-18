@@ -686,7 +686,6 @@ function populateModels() {
 
     const selectedBrand = brandSelect.value;
 
-    // Очищаем список моделей и устанавливаем пустое изображение
     modelSelect.innerHTML = '<option value="">Выберите модель</option>';
     carImage.src = '';
 
@@ -720,10 +719,4 @@ function updateCarDetails() {
             carImage.src = selectedModel.imgUrl;
         }
     }
-    window.console.log("TEST" + modelSelect.value)
 }
-
-
-window.onload = function() {
-    populateCarBrands();
-};
